@@ -82,11 +82,11 @@ function GetStarships() {
 
   return (
     <div>
-      this is starWar ships component
+      <h1>this is starWar ships component</h1>
       {ships && ships.length > 0 ? (
-        <ul>
+        <div className="mainBox">
           {ships.map((ship, index) => (
-            <div className="mainBox" key={index}>
+            <div key={index}>
               <div className="box">
                 <h3>{ship.name}</h3>
                 <p>Model: {ship.model}</p>
@@ -96,7 +96,7 @@ function GetStarships() {
               </div>
             </div>
           ))}
-        </ul>
+        </div>
       ) : (
         <p>No starships available</p>
       )}
