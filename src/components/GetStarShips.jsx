@@ -86,13 +86,15 @@ function GetStarships() {
       {ships && ships.length > 0 ? (
         <ul>
           {ships.map((ship, index) => (
-            <li key={index}>
-              <h3>{ship.name}</h3>
-              <p>Model: {ship.model}</p>
-              <p>Manufacturer: {ship.manufacturer}</p>
-              <p>Cost in credits: {ship.cost_in_credits}</p>
-              <p>Length: {ship.length}</p>
-            </li>
+            <div className="mainBox" key={index}>
+              <div className="box">
+                <h3>{ship.name}</h3>
+                <p>Model: {ship.model}</p>
+                <p>Manufacturer: {ship.manufacturer}</p>
+                <p>Cost in credits: {ship.cost_in_credits}</p>
+                <p>Length: {ship.length}</p>
+              </div>
+            </div>
           ))}
         </ul>
       ) : (
